@@ -1,41 +1,193 @@
-<!Doctype html>
-<html lang="es">    
-    <head > 
-        <nav>
-        <a href="#inicio">Inicio </a>
-        <a href="#paquete">Paquetes </a>
-        <a href="#sabores">Sabores </a>
-        <a href="#mipedido">Mi pedido </a>
-        </nav>
-        <img src="imagenes/encabezadomochi.png" alt="encabezadomochi" style="width:1500px;height:60px;">
-    </head>
-    <body>
-        <header>    
-            <img src="imagenes/logomochi.jpg" alt="logomarca" style ="width:1000px;height:50PX;">
-            <h1>El sabor de la experiencia </h1>
-        </header>
-        
-        <main>  
-            <section>
-                <p>
-                     Cada mochi destaca por su textura suave, delicada y colorida. Podrás disfrutar sabores como fresa, nutella, mango, oreo y muchos más, ideales para compartir, regalar o simplemente disfrutar en cualquier momento del día.       
-                </p>
-                <img src="imagenes/oreo.png" alt="logomarca" style ="width:100px;height:50PX;">
-                <img src="imagenes/mango.jpg" alt="logomarca" style ="width:100px;height:50PX;">
-                <img src="imagenes/nutella.jpg" alt="logomarca" style ="width:100px;height:50PX;">
-            </section>
-            <section>
-                <h1>Arma tu paquete</h1>
-                <h2>Eliga la cantidad y personaliza tu pedido ideal</h2>
-            </section>
-            <section>
-                <h1>Nuestros sabores</h1>
-                <h2>Haz click para elegir tu favorito y agregarlo a tu paquete </h2>
-            </section>
-        </main>
-        <footer>
-            <a href="">Agreganos a wacha </a>
-        </footer>
-    </body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochi-Co</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header id="inicio" class="encabezado">
+
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#sabores">Sabores</a>
+            <a href="#pedidos">Pedidos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <img src="imagenes/encabezadomochi.png" alt="Banner decorativo de mochis" class="banner">
+
+        <img src="imagenes/logomochi.jpg" alt="Logo Mochi-Co" class="logo">
+
+        <h1>El sabor de la experiencia</h1>
+
+        <div class="promo">
+            Obten gratis 5 Mochis extras por tu primer pedido!!
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="presentacion">
+
+            <p>
+                Cada mochi destaca por su textura suave, delicada y colorida.
+                Podrás disfrutar sabores como fresa, nutella, mango, oreo y muchos más,
+                ideales para compartir, regalar o simplemente disfrutar en cualquier momento del día.
+            </p>
+
+            <div class="galeria-mochis">
+                <img src="imagenes/oreo.png" alt="Mochi sabor oreo">
+                <img src="imagenes/mango.jpg" alt="Mochi sabor mango">
+                <img src="imagenes/nutella.jpg" alt="Mochi sabor nutella">
+            </div>
+
+        </section>
+
+        <section id="paquetes" class="paquetes">
+
+            <h2>Paquetes disponibles</h2>
+
+            <p>Contamos con 4 paquetes ideales para compartir</p>
+
+            <div class="contenedor-paquetes">
+
+                <div class="tarjeta-paquete">
+                    <h3>20</h3>
+                    <p>Unidades</p>
+                </div>
+
+                <div class="tarjeta-paquete">
+                    <h3>30</h3>
+                    <p>Unidades</p>
+                </div>
+
+                <div class="tarjeta-paquete">
+                    <h3>40</h3>
+                    <p>Unidades</p>
+                </div>
+
+                <div class="tarjeta-paquete">
+                    <h3>50</h3>
+                    <p>Unidades</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="sabores" class="sabores">
+
+            <h2>Nuestros sabores</h2>
+
+            <p>Haz clic para elegir tus favoritos y agregarlos a tu paquete</p>
+
+            <div class="contenedor-sabores">
+
+                <div class="tarjeta-sabor">
+                    <span>🍓</span>
+                    <p>Fresa</p>
+                </div>
+
+                <div class="tarjeta-sabor">
+                    <span>🥭</span>
+                    <p>Mango</p>
+                </div>
+
+                <div class="tarjeta-sabor">
+                    <span>⚫</span>
+                    <p>Oreo</p>
+                </div>
+
+                <div class="tarjeta-sabor">
+                    <span>🍪</span>
+                    <p>Chips Ahoy</p>
+                </div>
+
+                <div class="tarjeta-sabor">
+                    <span>🍇</span>
+                    <p>Mora</p>
+                </div>
+
+                <div class="tarjeta-sabor">
+                    <span>🍫</span>
+                    <p>Nutella</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="pedidos" class="contacto">
+
+            <h2>Mas informacion</h2>
+
+            <form action="guardar_pedido.php" method="POST">
+
+    <label for="nombre">Nombre</label>
+    <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        placeholder="Ingresa tu nombre"
+        required
+    >
+
+    <label for="whatsapp">Whatsapp</label>
+    <input 
+        type="tel" 
+        id="whatsapp" 
+        name="whatsapp" 
+        placeholder="Ingresa tu número de Whatsapp"
+        required
+    >
+
+    <label for="correo">Correo</label>
+    <input 
+        type="email" 
+        id="correo" 
+        name="correo" 
+        placeholder="Ingresa tu correo"
+        required
+    >
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+        </section>
+
+    </main>
+
+    <footer id="contacto" class="pie-pagina">
+
+        <img src="imagenes/logomochi.jpg" alt="Logo Mochi-Co" class="logo-footer">
+
+        <h3>Contacto de Whatsapp</h3>
+
+        <a 
+            href="https://wa.me/qr/LYBNW5BCEWJ6B1" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="enlace-whatsapp"
+        >
+            <img src="imagenes/WhatsApp.webp" alt="Whatsapp">
+            <span>Whatsapp</span>
+        </a>
+
+        <p>El sabor de la experiencia - Pedidos mínimos desde 20 unidades</p>
+
+    </footer>
+
+</body>
 </html>

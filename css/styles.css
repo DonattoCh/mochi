@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e9edf2;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #4b2b2b;
+}
+
+main,
+.encabezado,
+.pie-pagina{
+    width: 760px;
+    max-width: 100%;
+    margin: auto;
+    background-color: #d2e8c4;
+}
+
+.menu{
+    background-color: #9b6b57;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px 10px;
+}
+
+.menu a{
+    color: #d2f0b2;
+    text-decoration: none;
+    font-family: 'Fredoka', Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.menu a:hover{
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.banner{
+    width: 100%;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.logo{
+    width: 100%;
+    height: 125px;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    background-color: #9b6b57;
+}
+
+h1,
+h2,
+h3,
+.tarjeta-paquete h3,
+.tarjeta-sabor p,
+label,
+button,
+.promo{
+    font-family: 'Fredoka', Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 500;
+    color: #2b1b1b;
+    padding: 10px 0;
+}
+
+.promo{
+    background-color: #9b6b57;
+    color: #d2f0b2;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 9px 12px;
+    animation: movimiento-promo 1.6s infinite ease-in-out;
+}
+
+@keyframes movimiento-promo{
+    0%{
+        transform: scale(1);
+        color: #d2f0b2;
+    }
+
+    50%{
+        transform: scale(1.035);
+        color: #ffffff;
+    }
+
+    100%{
+        transform: scale(1);
+        color: #d2f0b2;
+    }
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #522819;
+    margin-bottom: 6px;
+}
+
+section p{
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.presentacion{
+    padding: 28px 30px 20px;
+}
+
+.presentacion p{
+    background-color: #f8bfd1;
+    padding: 18px 22px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.galeria-mochis{
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.galeria-mochis img{
+    width: 115px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.paquetes{
+    padding: 10px 30px 45px;
+}
+
+.paquetes > p{
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contenedor-paquetes{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-paquete{
+    background-color: #f8bfd1;
+    border: 2px solid #ff6fa5;
+    border-radius: 22px;
+    width: 115px;
+    padding: 12px 10px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-paquete:hover{
+    transform: scale(1.12) translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.22);
+}
+
+.tarjeta-paquete h3{
+    font-size: 23px;
+    color: #a67463;
+}
+
+.tarjeta-paquete p{
+    font-size: 16px;
+    color: #8b5b53;
+}
+
+.sabores{
+    padding: 35px 30px 40px;
+}
+
+.sabores > p{
+    margin-bottom: 30px;
+}
+
+.contenedor-sabores{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 28px;
+    max-width: 620px;
+    margin: auto;
+}
+
+.tarjeta-sabor{
+    background-color: #f8bfd1;
+    border: 2px solid #ff6fa5;
+    border-radius: 22px;
+    min-height: 105px;
+    padding: 18px 12px;
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-sabor:hover{
+    transform: scale(1.12) translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.22);
+}
+
+.tarjeta-sabor span{
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tarjeta-sabor p{
+    font-size: 24px;
+    font-weight: 700;
+    color: #a67463;
+    line-height: 1.1;
+}
+
+.contacto{
+    padding: 25px 45px 55px;
+}
+
+.contacto h2::after{
+    content: "Haz tu primer pedido aqui";
+    display: block;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #4b2b2b;
+    margin-top: 10px;
+}
+
+form{
+    background-color: #f7f7f7;
+    padding: 42px 45px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+label{
+    font-size: 22px;
+    font-weight: 700;
+    color: #a67463;
+}
+
+input{
+    height: 48px;
+    border-radius: 16px;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #444444;
+    color: white;
+    outline: none;
+}
+
+input::placeholder{
+    color: #d8d8d8;
+    font-size: 15px;
+}
+
+input:focus{
+    outline: 3px solid #f8bfd1;
+}
+
+button{
+    width: 250px;
+    margin: 25px auto 0;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f8bfd1;
+    color: #4b2b2b;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+button:hover{
+    background-color: #ff9fc0;
+    transform: scale(1.06);
+}
+
+.pie-pagina{
+    background-color: #ad7d69;
+    text-align: center;
+    padding-bottom: 65px;
+}
+
+.logo-footer{
+    width: 100%;
+    height: 105px;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    background-color: #9b6b57;
+    margin-bottom: 22px;
+}
+
+.pie-pagina h3{
+    color: white;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.enlace-whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.enlace-whatsapp img{
+    width: 28px;
+    height: 28px;
+}
+
+.pie-pagina p{
+    color: white;
+    font-size: 15px;
+}
+
+@media(max-width: 768px){
+
+    main,
+    .encabezado,
+    .pie-pagina{
+        width: 100%;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .menu a{
+        font-size: 18px;
+    }
+
+    .banner{
+        height: 70px;
+    }
+
+    .logo{
+        height: 105px;
+    }
+
+    .promo{
+        font-size: 18px;
+    }
+
+    .galeria-mochis{
+        gap: 25px;
+    }
+
+    .contenedor-sabores{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto{
+        padding: 25px 20px 45px;
+    }
+
+    form{
+        padding: 35px 25px;
+    }
+}
+
+@media(max-width: 480px){
+
+    .menu a{
+        font-size: 16px;
+    }
+
+    .contenedor-sabores{
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-mochis img{
+        width: 100px;
+        height: 150px;
+    }
+
+    button{
+        width: 200px;
+    }
+}
