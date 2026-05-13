@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: #e9edf2;
+    background-color: #d2e8c4;
     font-family: 'Poppins', Arial, sans-serif;
     color: #4b2b2b;
 }
@@ -13,16 +17,17 @@ body{
 main,
 .encabezado,
 .pie-pagina{
-    width: 760px;
+    width: 100%;
     max-width: 100%;
-    margin: auto;
+    margin: 0;
     background-color: #d2e8c4;
 }
 
 .menu{
     background-color: #9b6b57;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 70px;
     align-items: center;
     padding: 13px 10px;
 }
@@ -127,9 +132,10 @@ section p{
     background-color: #f8bfd1;
     padding: 18px 22px;
     border-radius: 6px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     text-align: left;
     font-size: 16px;
+    max-width: 850px;
 }
 
 .galeria-mochis{
@@ -253,7 +259,8 @@ form{
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: 20px;
+    margin: 20px auto 0;
+    max-width: 850px;
 }
 
 label{
@@ -345,68 +352,3 @@ button:hover{
     font-size: 15px;
 }
 
-@media(max-width: 768px){
-
-    main,
-    .encabezado,
-    .pie-pagina{
-        width: 100%;
-    }
-
-    .menu{
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .menu a{
-        font-size: 18px;
-    }
-
-    .banner{
-        height: 70px;
-    }
-
-    .logo{
-        height: 105px;
-    }
-
-    .promo{
-        font-size: 18px;
-    }
-
-    .galeria-mochis{
-        gap: 25px;
-    }
-
-    .contenedor-sabores{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contacto{
-        padding: 25px 20px 45px;
-    }
-
-    form{
-        padding: 35px 25px;
-    }
-}
-
-@media(max-width: 480px){
-
-    .menu a{
-        font-size: 16px;
-    }
-
-    .contenedor-sabores{
-        grid-template-columns: 1fr;
-    }
-
-    .galeria-mochis img{
-        width: 100px;
-        height: 150px;
-    }
-
-    button{
-        width: 200px;
-    }
-}
