@@ -18,18 +18,13 @@ $correo = $_POST['correo'];
 $sql = "INSERT INTO pedidos (nombre, whatsapp, correo) VALUES (?, ?, ?)";
 
 $stmt = $conexion->prepare($sql);
-
 $stmt->bind_param("sss", $nombre, $whatsapp, $correo);
 
 if ($stmt->execute()) {
-
     header("Location: index.html");
     exit();
-
 } else {
-
     echo "Error al registrar el pedido.";
-
 }
 
 $stmt->close();

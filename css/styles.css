@@ -27,16 +27,17 @@ main,
     background-color: #9b6b57;
     display: flex;
     justify-content: center;
-    gap: 70px;
     align-items: center;
-    padding: 13px 10px;
+    gap: clamp(18px, 5vw, 70px);
+    padding: 13px 20px;
+    flex-wrap: wrap;
 }
 
 .menu a{
     color: #d2f0b2;
     text-decoration: none;
     font-family: 'Fredoka', Arial, sans-serif;
-    font-size: 21px;
+    font-size: clamp(16px, 2vw, 21px);
     font-weight: 700;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.25);
     transition: transform 0.25s ease, color 0.25s ease;
@@ -49,7 +50,7 @@ main,
 
 .banner{
     width: 100%;
-    height: 75px;
+    height: clamp(60px, 10vw, 90px);
     object-fit: cover;
     object-position: center;
     display: block;
@@ -57,7 +58,7 @@ main,
 
 .logo{
     width: 100%;
-    height: 125px;
+    height: clamp(90px, 16vw, 140px);
     display: block;
     object-fit: contain;
     object-position: center;
@@ -77,20 +78,20 @@ button,
 
 h1{
     text-align: center;
-    font-size: 28px;
+    font-size: clamp(22px, 4vw, 32px);
     font-style: italic;
     font-weight: 500;
     color: #2b1b1b;
-    padding: 10px 0;
+    padding: 10px 15px;
 }
 
 .promo{
     background-color: #9b6b57;
     color: #d2f0b2;
     text-align: center;
-    font-size: 22px;
+    font-size: clamp(16px, 3vw, 22px);
     font-weight: 700;
-    padding: 9px 12px;
+    padding: 10px 15px;
     animation: movimiento-promo 1.6s infinite ease-in-out;
 }
 
@@ -101,7 +102,7 @@ h1{
     }
 
     50%{
-        transform: scale(1.035);
+        transform: scale(1.02);
         color: #ffffff;
     }
 
@@ -113,48 +114,49 @@ h1{
 
 h2{
     text-align: center;
-    font-size: 30px;
+    font-size: clamp(26px, 5vw, 36px);
     color: #522819;
     margin-bottom: 6px;
 }
 
 section p{
     text-align: center;
-    font-size: 17px;
+    font-size: clamp(15px, 2.5vw, 18px);
     line-height: 1.5;
 }
 
 .presentacion{
-    padding: 28px 30px 20px;
+    padding: clamp(20px, 5vw, 35px);
 }
 
 .presentacion p{
     background-color: #f8bfd1;
-    padding: 18px 22px;
-    border-radius: 6px;
+    padding: clamp(16px, 4vw, 24px);
+    border-radius: 8px;
     margin: 0 auto 30px;
     text-align: left;
-    font-size: 16px;
+    font-size: clamp(14px, 2.5vw, 17px);
     max-width: 850px;
 }
 
 .galeria-mochis{
     display: flex;
     justify-content: center;
-    gap: 45px;
+    align-items: center;
+    gap: clamp(18px, 5vw, 45px);
     flex-wrap: wrap;
 }
 
 .galeria-mochis img{
-    width: 115px;
-    height: 170px;
+    width: clamp(95px, 18vw, 130px);
+    height: clamp(145px, 28vw, 190px);
     object-fit: cover;
     border-radius: 14px;
     display: block;
 }
 
 .paquetes{
-    padding: 10px 30px 45px;
+    padding: clamp(25px, 6vw, 50px) 25px;
 }
 
 .paquetes > p{
@@ -165,7 +167,7 @@ section p{
 .contenedor-paquetes{
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: clamp(15px, 4vw, 28px);
     flex-wrap: wrap;
 }
 
@@ -173,29 +175,29 @@ section p{
     background-color: #f8bfd1;
     border: 2px solid #ff6fa5;
     border-radius: 22px;
-    width: 115px;
-    padding: 12px 10px;
+    width: clamp(105px, 22vw, 135px);
+    padding: 14px 10px;
     text-align: center;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tarjeta-paquete:hover{
-    transform: scale(1.12) translateY(-6px);
+    transform: scale(1.08) translateY(-5px);
     box-shadow: 0 10px 18px rgba(0,0,0,0.22);
 }
 
 .tarjeta-paquete h3{
-    font-size: 23px;
+    font-size: clamp(22px, 4vw, 28px);
     color: #a67463;
 }
 
 .tarjeta-paquete p{
-    font-size: 16px;
+    font-size: clamp(15px, 3vw, 18px);
     color: #8b5b53;
 }
 
 .sabores{
-    padding: 35px 30px 40px;
+    padding: clamp(30px, 6vw, 55px) 25px;
 }
 
 .sabores > p{
@@ -205,8 +207,8 @@ section p{
 .contenedor-sabores{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px 28px;
-    max-width: 620px;
+    gap: 20px 28px;
+    max-width: 720px;
     margin: auto;
 }
 
@@ -214,39 +216,39 @@ section p{
     background-color: #f8bfd1;
     border: 2px solid #ff6fa5;
     border-radius: 22px;
-    min-height: 105px;
+    min-height: 110px;
     padding: 18px 12px;
     text-align: center;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tarjeta-sabor:hover{
-    transform: scale(1.12) translateY(-6px);
+    transform: scale(1.08) translateY(-5px);
     box-shadow: 0 10px 18px rgba(0,0,0,0.22);
 }
 
 .tarjeta-sabor span{
-    font-size: 24px;
+    font-size: clamp(24px, 5vw, 32px);
     display: block;
     margin-bottom: 5px;
 }
 
 .tarjeta-sabor p{
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 27px);
     font-weight: 700;
     color: #a67463;
     line-height: 1.1;
 }
 
 .contacto{
-    padding: 25px 45px 55px;
+    padding: clamp(25px, 6vw, 55px);
 }
 
 .contacto h2::after{
     content: "Haz tu primer pedido aqui";
     display: block;
     font-family: 'Poppins', Arial, sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     font-weight: 400;
     color: #4b2b2b;
     margin-top: 10px;
@@ -254,27 +256,29 @@ section p{
 
 form{
     background-color: #f7f7f7;
-    padding: 42px 45px;
+    padding: clamp(25px, 6vw, 45px);
     border-radius: 35px;
     display: flex;
     flex-direction: column;
     gap: 14px;
     margin: 20px auto 0;
     max-width: 850px;
+    width: 100%;
 }
 
 label{
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
     font-weight: 700;
     color: #a67463;
 }
 
 input{
+    width: 100%;
     height: 48px;
     border-radius: 16px;
     border: none;
     padding: 10px 15px;
-    font-size: 18px;
+    font-size: clamp(15px, 2.5vw, 18px);
     background-color: #444444;
     color: white;
     outline: none;
@@ -282,7 +286,7 @@ input{
 
 input::placeholder{
     color: #d8d8d8;
-    font-size: 15px;
+    font-size: clamp(13px, 2.3vw, 15px);
 }
 
 input:focus{
@@ -290,7 +294,7 @@ input:focus{
 }
 
 button{
-    width: 250px;
+    width: min(250px, 90%);
     margin: 25px auto 0;
     padding: 14px;
     border: none;
@@ -311,12 +315,12 @@ button:hover{
 .pie-pagina{
     background-color: #ad7d69;
     text-align: center;
-    padding-bottom: 65px;
+    padding-bottom: clamp(40px, 8vw, 65px);
 }
 
 .logo-footer{
     width: 100%;
-    height: 105px;
+    height: clamp(85px, 14vw, 115px);
     display: block;
     object-fit: contain;
     object-position: center;
@@ -327,7 +331,7 @@ button:hover{
 .pie-pagina h3{
     color: white;
     font-family: 'Poppins', Arial, sans-serif;
-    font-size: 24px;
+    font-size: clamp(20px, 4vw, 24px);
     margin-bottom: 18px;
 }
 
@@ -338,7 +342,7 @@ button:hover{
     gap: 10px;
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     margin-bottom: 35px;
 }
 
@@ -349,6 +353,106 @@ button:hover{
 
 .pie-pagina p{
     color: white;
-    font-size: 15px;
+    font-size: clamp(13px, 2.5vw, 15px);
+    padding: 0 20px;
 }
 
+/* TABLET */
+@media(max-width: 900px){
+
+    .menu{
+        gap: 28px;
+    }
+
+    .contenedor-sabores{
+        max-width: 650px;
+    }
+}
+
+/* MÓVIL */
+@media(max-width: 600px){
+
+    .menu{
+        gap: 12px;
+        padding: 12px 8px;
+    }
+
+    .menu a{
+        font-size: 16px;
+    }
+
+    .banner{
+        height: 65px;
+    }
+
+    .logo{
+        height: 95px;
+    }
+
+    .presentacion{
+        padding: 20px 16px;
+    }
+
+    .galeria-mochis{
+        gap: 18px;
+    }
+
+    .paquetes{
+        padding: 25px 15px;
+    }
+
+    .contenedor-paquetes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 310px;
+        margin: auto;
+    }
+
+    .tarjeta-paquete{
+        width: 100%;
+    }
+
+    .sabores{
+        padding: 30px 15px;
+    }
+
+    .contenedor-sabores{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .tarjeta-sabor{
+        min-height: 95px;
+    }
+
+    .contacto{
+        padding: 25px 15px 45px;
+    }
+
+    form{
+        border-radius: 25px;
+    }
+}
+
+/* MÓVIL PEQUEÑO */
+@media(max-width: 380px){
+
+    .menu{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .contenedor-paquetes{
+        grid-template-columns: 1fr;
+        max-width: 180px;
+    }
+
+    .contenedor-sabores{
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-mochis img{
+        width: 95px;
+        height: 140px;
+    }
+}
